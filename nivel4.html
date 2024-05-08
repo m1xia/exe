@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+        <meta charset="utf-8">
+        <title>XIA.EXE</title>
+        <meta name="description" content="">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Glitch&display=swap" rel="stylesheet">
+	   
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+        <style type="text/css">
+*{
+    margin: 0;
+    padding: 0;
+}
+
+            html {
+                background-image: url("intro/fondoalas.gif");
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+            }
+            body {
+                
+                font-family: 'Rubik Glitch', serif;
+                text-align: center;
+            }
+            .fs {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+            }
+                    
+            header .navi
+            {
+                display: none;
+            }
+            
+           
+           
+			h1 {
+				margin: 0 auto;;
+				font-size: 4.5vw;
+				margin-bottom: 3px;
+				color: rgb(24, 231, 107);
+				font-weight: normal;
+			}
+			
+			a {
+			    color: inherit;
+			    text-decoration: none;
+			}
+			a.fx-flip {
+			    display: block;
+			    width: 50%;
+			    margin: 0 auto;
+			}
+			a.fx-flip h1 {
+			    line-height: 1;
+			    transition: all .3s;
+			    transform: scale(1, -1);
+			    margin-top: -0.25em;
+			}
+			a.fx-flip:hover h1 {
+			    transform: scale(1, 1);
+			    margin-top: 0;
+			}
+
+            p{
+    color: rgb(6, 55, 47);
+   
+  }
+			
+			
+			
+		</style>
+        
+    </head>
+    
+    <body class="loading">
+                           
+            <header id="start-layer" class="fs">
+                
+                <div class="img">
+                    
+                               </div>
+                               
+                <div class="title" >
+                    <a class="fx-flip btn-title" href="nivel4ruta.html">
+                        <p text-align: center > INTERACCIÓN: BAJA (SCROLL) CON EL MOUSE</p>
+                        
+                        <h1>NIVEL 4</h1>
+                        
+                    </a>
+                </div>
+                <div class="fs navi">
+                    <div class="top"></div>
+                    <div class="navi-main">
+                    </div>
+                    
+                    
+                </div>
+            </header>
+            
+            
+ 	<script>
+
+	$(function() {
+
+		$(".btn-title").click(function(e){
+		    e.preventDefault();
+		    $('header').toggleClass('menu');
+		});
+		$(".btn-info").click(function(e){
+		    e.preventDefault();
+		    $('body').toggleClass('info');
+		});
+		
+		
+		$(".btn-empty").mouseout(function(e){
+		    e.preventDefault();
+		    $(this).text('Chapter II');
+		});
+	    
+	   
+       
+        });
+
+       
+    </script>
+    
+    </body>
+
+</html>

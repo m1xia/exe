@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>XIA.EXE</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" integrity="sha512-RvZgNFwDeJ4oPjuhkIrBki+I1LjEW6TXbQ+qHFKEPOR126hk1dkg+cvOCW6vUTHQEcryzTmEzTkvHKcGpEFNUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js" integrity="sha512-lfl7IG9TmPKTuZ2ZIx2xfPRn2qWnfIleGc1LR7gm9jZOUVjki7lWJZJb1aB6AmxW3IL+2H98CgnXM3KtUV9BWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+        
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+<style>
+.img{
+    position:fixed;
+    opacity: 0.5;
+    left: 10px;
+    
+}
+html {
+      background-size:cover;
+    text-align: left;
+    
+
+}
+
+.body {
+  background-image: url("intro/menu.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: 'Rubik Glitch';
+}
+
+.dis {
+ margin-left: 1em;
+ margin-top: 5em;
+ position: relative;
+ 
+
+}
+
+</style>
+  </head>
+
+  <body class="body">
+    <img src="intro/giftexto.gif" class="img" width= "1500" height= "740" alt="mycore">
+    <div class="dis">  <img src="intro/peligro.jpg" width="1470" height="500"> </div>
+     
+
+    <script >
+
+       let a;
+       
+
+function setup(){
+a = createA('menu2.html', '->CONTINUAR');
+a.position(900, 650);
+a.style('font-size', '80px');
+a.style('color', 'red');
+
+a = createA('no.html', 'REGRESAR<-');
+a.position(100, 650);
+a.style('font-size', '80px');
+a.style('color', 'red');
+
+}
+
+
+    </script>
+
+<audio autoplay="autoplay" loop="loop">
+  <source src="audios/peligro.mp3" type="audio/mp3">
+</audio>
+    
+  </body>
+</html>

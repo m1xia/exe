@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>XIA.EXE</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" integrity="sha512-RvZgNFwDeJ4oPjuhkIrBki+I1LjEW6TXbQ+qHFKEPOR126hk1dkg+cvOCW6vUTHQEcryzTmEzTkvHKcGpEFNUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js" integrity="sha512-lfl7IG9TmPKTuZ2ZIx2xfPRn2qWnfIleGc1LR7gm9jZOUVjki7lWJZJb1aB6AmxW3IL+2H98CgnXM3KtUV9BWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+       
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+  html{
+    background-image: url("intro/start.gif");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    
+
+  }
+.body{
+    
+    
+    font-family: 'Press Start 2P';
+    text-align: right;
+
+  
+ }
+
+ a {
+
+  font-family: 'Press Start 2P';
+  font-size: 60px;
+  color: rgb(255, 2, 2);
+  left: 100%;
+  position: right bottom;
+ }
+
+
+
+.box {
+
+  width: 290px;
+  height: 150px;
+  background-color: rgb(82, 240, 227);
+  border-color: blueviolet;
+  position: relative; 
+  left: 1220px ;
+  
+  
+}
+
+</style>
+  </head>
+
+  <body >
+    
+
+    <script>
+      let canvas;
+      let algo;
+      let a;
+      let exe;
+      let cloud;
+      let r;
+      let g;
+      let b;
+      let rgbColor;
+let button;
+
+      function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
+
+
+      function setup(){
+canvas= createCanvas(windowWidth, windowHeight);
+canvas.position (0,0);
+
+exe = loadImage ("intro/exe.png");
+cloud = loadImage("intro/cloud.png");
+
+
+textFont=('Press Start 2P');
+
+a = createA('start2.html', 'CLICK');
+a.position(1255, 470);
+a.style ('font family','Press Start 2P')
+a.style('font-size', '30px');
+a.style('color', 'white');
+
+a = createA('start2.html', 'TO START');
+a.position(1220, 509);
+a.style ('font family','Press Start 2P')
+a.style('font-size', '30px');
+a.style('color', 'white');
+
+a = createA('1p.html', '<1P>');
+a.position(1200, 639);
+a.style ('font family','Press Start 2P')
+a.style('font-size', '30px');
+a.style('color', 'white');
+
+
+r= color (255, 0, 255);
+g = color (0, 255, 255);
+b = color (0,0, 255);
+
+button = createButton('click me');
+button.position(200, 440);
+button.mousePressed(cambiarColor);
+
+button = createButton('click me');
+button.position(900, 440);
+button.mousePressed(cambiarColor);
+
+button = createButton('click me');
+button.position(400, 140);
+button.mousePressed(cambiarColor);
+
+
+rgbColor = color(random(255), random(255), random(255));
+
+
+      }
+
+function cambiarColor(){ 
+  rgbColor = color(random(255), random(255), random(255));
+
+}
+
+function draw(){
+
+  push();
+noStroke();
+
+  fill(rgbColor);
+rect (0, 0, 470, 30);
+rect (0, 0, 15, 900);
+pop();
+
+image (cloud, 1090, 390, 430, 320);
+image (exe, 900, -20, 639, 400);
+
+
+
+text ('TM<2022>°Licensed by FRESIAMILENA I.N.C.milexia.exe*ALL RIGHTS RESERVED*', 5, 12 );
+  text ('1vd 00001 7D010100', 25, 22 );
+
+
+
+}
+
+
+
+    </script>
+
+<audio src="audios/startaudio.mp3" id="my_audio"autoplay="autoplay" loop="loop">
+  
+</audio>
+<script>
+  window.onload=function(){
+    document.getElementById("my_audio").play();
+  }
+</script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>XIA.EXE</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" integrity="sha512-RvZgNFwDeJ4oPjuhkIrBki+I1LjEW6TXbQ+qHFKEPOR126hk1dkg+cvOCW6vUTHQEcryzTmEzTkvHKcGpEFNUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js" integrity="sha512-lfl7IG9TmPKTuZ2ZIx2xfPRn2qWnfIleGc1LR7gm9jZOUVjki7lWJZJb1aB6AmxW3IL+2H98CgnXM3KtUV9BWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+       
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Glitch&display=swap" rel="stylesheet">
+
+<style>
+.btn-back {
+    position: fixed;
+    left: 50%;
+    bottom: 50%;
+    width: 6em;
+    text-align: center;
+    margin-left: -3em;
+    z-index: -1000;
+}
+
+.body{
+    
+    
+    font-family: 'Rubik Glitch';
+
+  
+ }
+</style>
+  </head>
+
+  <body class="body">
+<div class="img">
+      </div>
+
+    
+
+    <script>
+
+let a;
+
+let canvas; 
+
+let fondo; 
+let stopp;
+let cuerpo;
+let cuchilla;
+let cuerpo2;
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
+
+
+function setup(){
+    canvas = createCanvas(windowWidth, windowHeight); 
+    canvas.position(0, 0); 
+
+
+fondo = loadImage("intro/coregif.gif");
+cuerpo = loadImage ("intro/cuerpo.png");
+cuchilla = loadImage ("intro/cuchilla.png");
+stopp = loadImage ("intro/f1.jpg");
+cuerpo2=loadImage("intro/cuerpo2.png");
+
+
+
+
+textFont('Rubik Glitch');
+
+a = createA('menu.html', 'start?');
+a.position(850, 500);
+a.style ('font family','Rubik Glitch')
+a.style('font-size', '40px');
+a.style('color', 'red');
+
+}
+
+function draw(){
+
+background (255);
+
+image (cuerpo, 430, 220, 600, 730);
+
+if(mouseX > 430 && mouseY > 220){
+   if (mouseX<630 && mouseY<530){
+    image (cuerpo, 430, 220, 600, 730); 
+       textSize (13);
+       fill(0);
+       text('click para cortar', 450, 400);
+       
+
+       if (mouseIsPressed) {
+           background(0);
+           image (cuerpo2, 430, 220, 600, 730);
+           fill (255, 0, 0);
+           textSize(80);
+           text('NO', random(windowWidth), random(windowHeight));
+           text('Stop', random(windowWidth), random(windowHeight));
+           text('no', random(windowWidth), random(windowHeight));
+           text('!!!', random(windowWidth), random(windowHeight));
+           
+       }
+       
+
+   }
+}
+
+
+image(cuchilla, mouseX, mouseY, 60, 60);
+
+}
+
+
+
+</script>
+    
+  </body>
+</html>
